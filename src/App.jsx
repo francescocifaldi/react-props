@@ -1,15 +1,13 @@
-import Card from "./components/card/Card.jsx"
 import Header from "./components/header/Header.jsx"
 import Footer from "./components/footer/Footer.jsx"
+import Main from "./components/main/main.jsx"
 
 function App() {
 
   return (
     <>
       <Header />
-      <div className="container">
-        <Card />
-      </div>
+      <Main />
       <Footer />
     </>
   )

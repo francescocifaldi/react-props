@@ -1,6 +1,5 @@
 import style from './Card.module.css'
 import Button from "../button/Button"
-import { posts } from '../../posts.js'
 
 export default function Card() {
     return (

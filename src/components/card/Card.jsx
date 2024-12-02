@@ -20,7 +20,12 @@ export default function Card({ post }) {
                 <h2>{title}</h2>
                 <p>{content}</p>
                 <p>{id}</p>
-                <p>{tags}</p>
+                <ul>
+                    {tags.map((tag) => (
+                        <li key={tag}>{tag}</li>
+                    ))}
+
+                </ul>
                 <Button />
             </div>
         </div>

@@ -12,8 +12,7 @@ export default function Main() {
     })
 
     return (
-        <>
-
+        <main>
             <ul>
                 {uniqueTags.map((uniqueTag) => (
                     <li key={uniqueTag}>{uniqueTag}</li>
@@ -29,6 +28,6 @@ export default function Main() {
                     </div >
                 ))
             }
-        </>
+        </main>
     )
 }

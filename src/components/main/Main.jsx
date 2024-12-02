@@ -8,7 +8,8 @@ export default function Main() {
                 posts.map((post) => (
                     < div key={post.id} className="container" >
                         {post.published &&
-                            < Card title={post.title} content={post.content} id={post.id} />}
+                            < Card post={post} />
+                        }
                     </div >
                 ))
             }

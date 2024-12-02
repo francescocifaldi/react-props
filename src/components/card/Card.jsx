@@ -1,7 +1,15 @@
 import style from './Card.module.css'
 import Button from "../button/Button"
 
-export default function Card({ title, content, id }) {
+export default function Card({ post }) {
+
+    const {
+        id,
+        title,
+        content,
+        tags
+    } = post
+
     return (
 
         <div className={style.card}>
@@ -12,6 +20,7 @@ export default function Card({ title, content, id }) {
                 <h2>{title}</h2>
                 <p>{content}</p>
                 <p>{id}</p>
+                <p>{tags}</p>
                 <Button />
             </div>
         </div>

@@ -13,21 +13,28 @@ export default function Main() {
 
     return (
         <main>
-            <ul>
-                {uniqueTags.map((uniqueTag) => (
-                    <li key={uniqueTag}>{uniqueTag}</li>
-                ))}
-            </ul>
+            <div className="container">
+                <ul className="row">
+                    {uniqueTags.map((uniqueTag) => (
+                        <li key={uniqueTag}>{uniqueTag}</li>
+                    ))}
+                </ul>
+            </div>
+            < div className="container" >
+                <div className="row">
+                    {
+                        posts.map((post) => (
 
-            {
-                posts.map((post) => (
-                    < div key={post.id} className="container" >
-                        {post.published &&
-                            < Card post={post} />
-                        }
-                    </div >
-                ))
-            }
+                            <div key={post.id} className="col-4">
+                                {post.published &&
+                                    < Card post={post} />
+                                }
+                            </div>
+
+                        ))
+                    }
+                </div>
+            </div >
         </main>
     )
 }

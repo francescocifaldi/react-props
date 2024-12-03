@@ -16,13 +16,13 @@ export default function Card({ post }) {
 
         <div className={style.card}>
             <div className="image">
-                <img src={image || placeholder} />
+                <img className={style.image} src={image || placeholder} />
             </div>
-            <div className="description">
+            <div className={style.body}>
                 <h2>{title}</h2>
-                <p>{content}</p>
+                <p className={style.description}>{content}</p>
                 <p>{id}</p>
-                <ul>
+                <ul className='row'>
                     {tags.map((tag) => (
                         <li key={tag}>{tag}</li>
                     ))}

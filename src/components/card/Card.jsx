@@ -1,5 +1,6 @@
 import style from './Card.module.css'
 import Button from "../button/Button"
+import placeholder from "../../assets/31343C.svg"
 
 export default function Card({ post }) {
 
@@ -7,14 +8,15 @@ export default function Card({ post }) {
         id,
         title,
         content,
-        tags
+        tags,
+        image
     } = post
 
     return (
 
         <div className={style.card}>
             <div className="image">
-                IMG
+                <img src={image || placeholder} />
             </div>
             <div className="description">
                 <h2>{title}</h2>
